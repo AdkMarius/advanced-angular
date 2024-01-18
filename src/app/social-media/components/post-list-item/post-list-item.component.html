@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <span highlight color="lightgreen">{{ post.title | titlecase }}</span>
+    </mat-card-title>
+    <mat-card-subtitle>
+<!--      <span>{{ tempUser | username: 'en' }}</span>-->
+      <span>{{ post.createdDate | timeAgo }}</span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image *ngIf="post.imageUrl as imageUrl" [src]="imageUrl" [alt]="post.title">
+    <p class="post-content">{{ post.content | shorten: 150}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-comment [comments]="post.comments" (newComment)="onAddNewComment($event)"></app-comment>
+  </mat-card-actions>
+</mat-card>
