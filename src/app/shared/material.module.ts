@@ -10,6 +10,8 @@ import {MatLineModule} from "@angular/material/core";
 import {MatCheckbox, MatCheckboxModule} from "@angular/material/checkbox";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatLegacyListModule} from "@angular/material/legacy-list";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   exports: [
@@ -23,7 +25,8 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatLineModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule {}
